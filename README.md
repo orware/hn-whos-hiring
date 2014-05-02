@@ -13,11 +13,13 @@ However, in order to get to the fun "displayed in a variety of useful ways" the 
 
 First the data would need to be extracted from the Hacker News website and cached (so that I could be a good citizen and not throttle their servers with a lot of requests). After the cached files were created I could then experiment and extract the useful information (basic thread info + the top level comments which were almost always some sort of listing) into data structures that could then be imported into a database.
 
-This phase has already been completed and you can use the SQL files above and import the data into a MySQL database.
+This phase has already been completed and you can use the SQL files above and import the data into a MySQL database. If anyone is interested in the Phase 1 code, with the raw cached files and processing code for the (fairly messy) HTML for the useful bits, just let me know in the HN Comments and I can add it to the Repository as well (code is written in PHP).
 
 ### Phase 2 (Extract/Associate Useful Information from Listings):
 
 This next phase is much more difficult since it requires a lot more manual analysis/work to be done. This is the phase that allows people to ask a lot of the questions that I was wondering about. In order to facilitate this phase I created a schema for storing all of the companies, locations, job titles, and tools (programming languages, frameworks, database systems, platforms, etc.) related to a listing and then created a simple processing form for creating the individual items and then associating them with a listing.
+
+If anyone is interested in taking a look at this code (it's really rough/simple at the moment since I haven't spent a lot of time improving the workflow and making it production ready) I'd be happy to add it to the Repository (it's written using PHP). Let me know in the HN comments.
 
 This phase seems like it would be good to automate with something like Amazon's MTurk service, but I still need to learn more about it if I want to use that option. Initially, I was just going to open up the processing page to the community and have them help out, but then I wasn't sure if quality/consistency would be high enough (I'm pretty sure it would be, but it would be nice to have that confirmed by the community).
 
